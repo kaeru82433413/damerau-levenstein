@@ -44,7 +44,7 @@ fn main() {
 
 fn calculate(s: &[char], t: &[char]) -> DpTable {
     let (n, m) = (s.len(), t.len());
-    let mut dp = vec![vec![(n.max(m), Operation::Unset); m+1]; n+1];
+    let mut dp = vec![vec![(n.max(m)+1, Operation::Unset); m+1]; n+1];
     
     for i in 0..=n {
         for j in 0..=m {
